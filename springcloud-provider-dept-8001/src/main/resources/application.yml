@@ -7,6 +7,7 @@ mybatis:
   mapper-locations:
     - classpath:mybatis/mapper/**/*.xml
 
+---
 spring:
   application:
     name: provider-dept
@@ -21,3 +22,11 @@ spring:
       initial-size: 2
       max-total: 5
       max-wait-millis: 200
+
+---
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:7001/eureka

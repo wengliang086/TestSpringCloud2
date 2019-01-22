@@ -4,3 +4,10 @@ server:
 spring:
   application:
     name: consumer-dept
+    
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:7001/eureka
